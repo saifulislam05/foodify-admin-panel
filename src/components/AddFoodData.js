@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // imports from firebase
-import { db, storage } from '../Firebase/Config';
+import { db, storage } from '../firebase';
 import { addDoc,collection } from 'firebase/firestore';
 import {ref,uploadBytes,getDownloadURL} from 'firebase/storage'
 import "./AddFoodData.css";
@@ -12,9 +12,11 @@ const AddFoodData = () => {
     const [image,setImage]=useState(null)
     const [address,setAddress]=useState('')
     const [phone,setPhone]=useState('')
-    // const [imageUrl,setImageUrl]=useState('')
-    // console.log(name, description, category, price, image, address, phone);
-    
+
+  
+  console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+  
+  
     const handleSubmit = (e) => {
       e.preventDefault()
       
