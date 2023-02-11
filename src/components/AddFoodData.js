@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // imports from firebase
-import { db, storage } from '../firebase';
+import { db, storage } from '../Firebase/firebaseConfig';
 import { addDoc,collection } from 'firebase/firestore';
 import {ref,uploadBytes,getDownloadURL} from 'firebase/storage'
 import "./AddFoodData.css";
@@ -125,7 +125,7 @@ const AddFoodData = () => {
           }}
         />
         <br />
-        <button onClick={handleSubmit}>Upload Data </button>
+        <button onClick={handleSubmit} >Upload Data </button>
       </form>
     </div>
   );
