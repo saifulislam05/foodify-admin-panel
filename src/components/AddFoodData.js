@@ -12,8 +12,7 @@ const AddFoodData = () => {
     const [image,setImage]=useState(null)
     const [address,setAddress]=useState('')
     const [phone,setPhone]=useState('')
-    // const [imageUrl,setImageUrl]=useState('')
-    // console.log(name, description, category, price, image, address, phone);
+
     
     const handleSubmit = (e) => {
       e.preventDefault()
