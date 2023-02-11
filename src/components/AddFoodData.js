@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 // imports from firebase
+<<<<<<< HEAD
 import { db, storage } from '../firebase';
+=======
+import { db, storage } from '../Firebase/firebaseConfig';
+>>>>>>> 2b4b9a11c4bb07bfaaa7576fea270f484c72123b
 import { addDoc,collection } from 'firebase/firestore';
 import {ref,uploadBytes,getDownloadURL} from 'firebase/storage'
 import "./AddFoodData.css";
