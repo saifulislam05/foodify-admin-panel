@@ -1,4 +1,5 @@
 
+import { type } from '@testing-library/user-event/dist/type';
 import './App.css';
 import AddFoodData from './components/AddFoodData';
 

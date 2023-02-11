@@ -10,10 +10,21 @@ const AddFoodData = () => {
     const [category, setCategory] = useState('');
     const [price,setPrice]=useState('')
     const [image,setImage]=useState(null)
-    const [address,setAddress]=useState('')
-    const [phone,setPhone]=useState('')
-    // const [imageUrl,setImageUrl]=useState('')
-    // console.log(name, description, category, price, image, address, phone);
+//
+    const [type,setType]=useState('')
+    const [mealType,setMealType]=useState('')
+    const [addon,setAddon]=useState('')
+    const [addonPrice, setAddonPrice] = useState('')
+    
+  //address
+  const [phone, setPhone] = useState('')
+    const [email,setEmail]=useState('')
+    const [addressBuilding, setAddressBuilding] = useState("");
+    const [addressStreet, setAddressStreet] = useState("");
+    const [addressCity, setAddressCity] = useState("");
+    const [addressPin, setAddressPin] = useState("");
+
+
     
     const handleSubmit = (e) => {
       e.preventDefault()
@@ -36,9 +47,17 @@ const AddFoodData = () => {
                   description,
                   category,
                   price,
-                  imageUrl:url,
-                  address,
+                  imageUrl: url,
+                  type,
+                  mealType,
+                  addon,
+                  addonPrice,
                   phone,
+                  email,
+                  addressBuilding,
+                  addressStreet,
+                  addressCity,
+                  addressPin,
                 };
                 console.log(foodData);
                 try {
@@ -80,6 +99,33 @@ const AddFoodData = () => {
           }}
         />
         <br />
+        <div className='form_row'>
+          <div className="form_col">
+            <label>Food Price</label>
+            <input
+              type="text"
+              name="food_price"
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+            />
+          </div>
+          <div className="form_col">
+            <label>Food Type</label>
+            <select
+              type="text"
+              name="food_price"
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+            >
+              <option value='null'>select food type</option>
+              <option value='veg'>Veg</option>
+              <option value='non_veg'>Non-veg</option>
+            </select>
+          </div>
+          
+        </div>
         <label>Food category</label>
         <input
           type="text"
@@ -112,7 +158,7 @@ const AddFoodData = () => {
           type="text"
           name="food_name"
           onChange={(e) => {
-            setAddress(e.target.value);
+            // setAddress(e.target.value);
           }}
         />
         <br />
@@ -125,7 +171,7 @@ const AddFoodData = () => {
           }}
         />
         <br />
-        <button onClick={handleSubmit} >Upload Data </button>
+        <button onClick={handleSubmit}>Upload Data </button>
       </form>
     </div>
   );

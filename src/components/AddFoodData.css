@@ -43,3 +43,9 @@ button{
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.form_row{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: ;
+}
